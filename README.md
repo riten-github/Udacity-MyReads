@@ -24,6 +24,6 @@ To get started developing right away:
 * Download the project and navigate to root folder
 * install all project dependencies with `npm install`
 * start the development server with `npm start`
-* open browser and type http://localhost:30001 and hit enter key
+* open browser and type http://localhost:3001 and hit enter key
 
 

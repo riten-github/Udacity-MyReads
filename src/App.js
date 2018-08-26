@@ -28,7 +28,7 @@ getAllBooks=()=>{
     })
 }
 /*
-This function updates the book shelf and move to the respective shelf
+This function updates the book obj  and move it to the respective shelf
 book: book obj to be updated
 id: used to fetch the shelf of the book to be updated.
 */

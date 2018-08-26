@@ -5,6 +5,7 @@ import * as BooksAPI from './utils/BooksAPI'
 import {Route} from 'react-router-dom'
 import SearchBook from './searchBook'
 
+
 class App extends Component{
 state={
     books:[],
@@ -13,6 +14,9 @@ state={
 componentDidMount(){
    this.getAllBooks()
 }
+/*
+fetch all the book records
+*/
 getAllBooks=()=>{
      BooksAPI.getAll()
     .then((books)=>
@@ -23,13 +27,18 @@ getAllBooks=()=>{
         }))
     })
 }
-
+/*
+This function updates the book shelf and move to the respective shelf
+book: book obj to be updated
+id: used to fetch the shelf of the book to be updated.
+*/
 moveTo=(book,id)=>{
     this.setState({showloader:true})
     let shelf=document.getElementById(id).value
     
     BooksAPI.update(book, shelf)
     .then(
+    
     this.getAllBooks()
     )
 }
